@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameStream - Subscribe</title>
+    <link rel="stylesheet" href="subscribe.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="img/logo.png" alt="GameStream Logo" height="50"
+        /></a>
+      </div>
+      <div class="burger" id="burger">&#9776;</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscribe.html" class="active">Subscribe</a></li>
+          <li><a href="contact.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="subscribe-section">
+        <h1>Choose Your Subscription</h1>
+        <div class="plans">
+          <div class="plan">
+            <h2>Basic Plan</h2>
+            <p>Access to free games and updates</p>
+            <p class="price">$5 / month</p>
+            <button class="buy-btn" data-plan="Basic Plan">Buy</button>
+          </div>
+          <div class="plan">
+            <h2>Pro Plan</h2>
+            <p>Everything in Basic + exclusive content</p>
+            <p class="price">$10 / month</p>
+            <button class="buy-btn" data-plan="Pro Plan">Buy</button>
+          </div>
+          <div class="plan">
+            <h2>Premium Plan</h2>
+            <p>All Pro features + early access to new games</p>
+            <p class="price">$20 / month</p>
+            <button class="buy-btn" data-plan="Premium Plan">Buy</button>
+          </div>
+        </div>
+        <p id="result-message"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 GameStream. All rights reserved.</p>
+    </footer>
+
+    <script src="subscribe.js"></script>
+  </body>
+</html>

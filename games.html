@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameStream - Games</title>
+    <link rel="stylesheet" href="games.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="GameStream Logo" />
+        </a>
+      </div>
+      <div class="burger" id="burger">&#9776;</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html" class="active">Games</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="contact.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="games-section">
+        <h1>All Games</h1>
+        <input type="text" id="search" placeholder="Search games..." />
+        <div id="games-list" class="games-container"></div>
+      </section>
+    </main>
+
+    <div id="game-frame-container" class="hidden">
+      <button id="close-game">✖</button>
+      <iframe id="game-frame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+      <p>© 2025 GameStream. All rights reserved.</p>
+    </footer>
+
+    <script src="games.js"></script>
+  </body>
+</html>

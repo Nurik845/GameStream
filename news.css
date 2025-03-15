@@ -1,0 +1,140 @@
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.burger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a.active {
+  background: #00aaff;
+}
+
+nav a:hover {
+  background: #005577;
+}
+
+.news-section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#search {
+  width: 90%;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 20px;
+  border: 2px solid #00aaff;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card {
+  background: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.news-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.news-card-content {
+  flex: 1;
+  text-align: left;
+}
+
+.news-card-content h3 {
+  margin: 0 0 10px;
+}
+
+.news-card-content a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .news-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: auto;
+  }
+}

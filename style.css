@@ -1,0 +1,239 @@
+:root {
+  --bg-gradient: radial-gradient(circle at top, #222831, #0f0f0f);
+  --text-color: #fff;
+  --accent-color: #ff0033;
+  --secondary-accent: #00aaff;
+}
+
+body.light-theme {
+  --bg-gradient: radial-gradient(circle at top, gold, orange);
+  --text-color: #000;
+  --accent-color: #d62828;
+  --secondary-accent: #ff8800;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background 0.8s, color 0.8s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+#theme-toggle {
+  padding: 10px 20px;
+  border: 2px solid var(--secondary-accent);
+  background: transparent;
+  color: var(--secondary-accent);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: var(--secondary-accent);
+  color: white;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: var(--secondary-accent);
+  text-shadow: 0 0 15px var(--secondary-accent),
+    0 0 30px var(--secondary-accent);
+  animation: neonPulse 3s infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 10px var(--secondary-accent);
+  }
+  to {
+    text-shadow: 0 0 25px var(--secondary-accent),
+      0 0 50px var(--secondary-accent);
+  }
+}
+
+.hero p {
+  margin: 20px 0;
+}
+.btn {
+  padding: 15px 40px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Cards */
+.features {
+  padding: 70px 20px;
+  text-align: center;
+}
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.feature-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+  transition: 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--secondary-accent);
+}
+.feature-card svg {
+  color: var(--secondary-accent);
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px var(--secondary-accent));
+}
+
+/* Button fixed */
+.join-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 15px 25px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px var(--accent-color);
+  transition: 0.3s;
+}
+.join-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Fade */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px; /* Отступ между логотипом, меню и кнопкой */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Чуть отделим логотип */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px; /* Равномерные отступы между ссылками */
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+
+  /* Кнопка Join Now по центру */
+  .join-btn {
+    right: 50%;
+    bottom: 20px;
+    transform: translateX(50%);
+  }
+
+  /* Кнопка Light/Dark меньше */
+  #theme-toggle {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .join-btn {
+    padding: 10px 18px;
+    font-size: 0.9em;
+  }
+
+  #theme-toggle {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
